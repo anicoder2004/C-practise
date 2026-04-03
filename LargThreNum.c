@@ -23,7 +23,7 @@ double get_validated_input(int count) {
 
     // Check if conversion happened and if there are trailing invalid characters
     if (endptr == buffer || (*endptr != '\n' && *endptr != '\0')) {
-        printf("Error: Invalid input detected. Only integers or doubles are allowed.\n"); 
+        printf("Error: Invalid input detected. Only Numbers are allowed.\n"); 
         exit(EXIT_FAILURE);
     }
 
