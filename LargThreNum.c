@@ -4,22 +4,25 @@
 double get_validated_input(int count) {
     char buffer[100];
     char *endptr;
+    double value;
 
+while (1) {  
     printf("Enter number %d: ", count);
     
     if (fgets(buffer, sizeof(buffer), stdin) == NULL) {
-        printf("Error: Failed to read input.\n");
-    }
+        printf("Error: System failed to read input. Exiting...\n");
+        EXIT_FAILURE; }
 
     // Convert string to double
-    double value = strtod(buffer, &endptr);
+    value = strtod(buffer, &endptr);
 
     // Check if conversion happened and if there are trailing invalid characters
     if (endptr == buffer || (*endptr != '\n' && *endptr != '\0')) {
         printf("Error: Invalid input detected. Only Numbers are allowed.\n"); 
-        exit(EXIT_FAILURE);
-    }
+        continue; }
 
+    break; 
+}
     return value;
 }
 

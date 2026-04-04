@@ -4,25 +4,29 @@
 long long get_validated_int(const char* label) {
     char buffer[100];
     char *endptr;
+    long long value;
 
+while (1) {
     printf("Enter %s: ", label);
     
     if (fgets(buffer, sizeof(buffer), stdin) == NULL) {
-        exit(EXIT_FAILURE);
-    }
+        printf("Error: System failed to read input. Exiting...\n");
+        exit(EXIT_FAILURE); }
 
-    long long value = strtoll(buffer, &endptr, 10);
+    value = strtoll(buffer, &endptr, 10);
 
     // 1. Must be a number (endptr != buffer)
     // 2. Must not have decimals (endptr must point to newline)
     if (endptr == buffer || (*endptr != '\n' && *endptr != '\0')) {
         printf("\nError: Invalid input. Please enter a whole number only.\n");
-        exit(EXIT_FAILURE); }
+        continue; }
 
     else if (value<0) {
         printf("\nError: You should enter positive numbers only.\n");
-        exit(EXIT_FAILURE); }
+        continue; }
 
+    break; 
+}
     return value;
 }
 

@@ -5,18 +5,23 @@
 double get_validated_input(const char* side_name) {
     char buffer[100];
     char *endptr;
+    double value;
 
+while (1) {
     printf("Enter the length of side %s: ", side_name);
     
     if (fgets(buffer, sizeof(buffer), stdin) == NULL) {
+        printf("Error: System failed to read input. Exiting...\n");
         exit(EXIT_FAILURE); }
 
-    double value = strtod(buffer, &endptr);
+    value = strtod(buffer, &endptr);
 
     if (endptr == buffer || (*endptr != '\n' && *endptr != '\0') || value <= 0) {
         printf("\nError: Invalid input. You should enter a positive number.\n");
-        exit(EXIT_FAILURE); }
+        continue; }
 
+    break; 
+}
     return value;
 }
 
