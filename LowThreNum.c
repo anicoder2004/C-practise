@@ -3,11 +3,6 @@
 #include <ctype.h>
 #include <string.h>
 
-/**
- * Function to validate and parse the input.
- * If the input is not a valid number (int or double), 
- * it prints an error and terminates the program.
- */
 double get_validated_input(int count) {
     char buffer[100];
     char *endptr;
