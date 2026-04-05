@@ -1,3 +1,5 @@
+//This Code is to Measure GCD[Greatest Common Divisor/ go.sa.gu] of Three Numbers
+
 #include <stdio.h>
 #include <stdlib.h>
 

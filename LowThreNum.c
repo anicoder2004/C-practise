@@ -1,3 +1,6 @@
+//This Code is to get the Lowest Number of Three Numbers
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
