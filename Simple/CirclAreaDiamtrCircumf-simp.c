@@ -1,3 +1,4 @@
+// This Question came in 2023
 #include <stdio.h>
 
 #define PI 3.14159265359
@@ -12,7 +13,7 @@ int main() {
     
     printf("Enter the radius of the circle: ");
     if (scanf("%lf%c", &radius, &extra) != 2 || extra != '\n' || radius < 0) {
-        printf("Invalid input. Please enter numbers only.\n");
+        printf("Invalid input. Please enter posiitve numbers only.\n");
         return 1;
     }
  
