@@ -40,9 +40,9 @@ int main() {
     circumf = 2*M_PI*radius;
     area = M_PI*pow(radius, 2); // power, 2-> square, 3-> cube
 
-    printf("\nDiameter: %.3g\n", diamtr);
-    printf("Circumference: %.3g\n", circumf);
-    printf("Area: %.3g\n", area);
+    printf("\nDiameter: %.2f\n", diamtr);
+    printf("Circumference: %.2f\n", circumf);
+    printf("Area: %.2f\n", area);
 
     return 0;
 }

@@ -31,7 +31,7 @@ while (1) {
 }
 
 int main() {
-    double a, b, c, max;
+    double a, b, c;
 
     printf("--- Lowest of Three Numbers ---\n");
 
